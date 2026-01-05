@@ -45,7 +45,7 @@ const ContactSection: React.FC = () => {
     <section 
       id="contact" 
       ref={ref as React.RefObject<HTMLElement>}
-      className="section-padding bg-foreground text-background"
+      className="section-padding bg-charcoal text-warm-white"
     >
       <div className="container-wide">
         <div className="grid lg:grid-cols-2 gap-16">
@@ -55,11 +55,14 @@ const ContactSection: React.FC = () => {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}
           >
-            <h2 className="heading-primary text-background mb-6">
+            {/* Gold accent line */}
+            <div className="w-12 h-0.5 bg-primary mb-8" />
+            
+            <h2 className="heading-primary text-warm-white mb-6">
               {t.contact.title}
             </h2>
 
-            <p className="body-large text-background/70 mb-12">
+            <p className="body-large text-warm-white/70 mb-12">
               {t.contact.subtitle}
             </p>
 
@@ -67,7 +70,7 @@ const ContactSection: React.FC = () => {
               {/* Primary CTA - Phone Call for scheduling */}
               <button 
                 onClick={handleCall}
-                className="w-full flex items-center justify-center gap-3 px-8 py-5 bg-background text-foreground font-medium tracking-wide transition-all duration-300 hover:bg-background/90 rounded-lg"
+                className="w-full btn-primary"
               >
                 <Phone className="w-5 h-5" />
                 {t.contact.schedule}
@@ -77,14 +80,14 @@ const ContactSection: React.FC = () => {
               <div className="grid grid-cols-2 gap-4">
                 <button 
                   onClick={handleWhatsApp}
-                  className="flex items-center justify-center gap-2 px-6 py-4 bg-green-600 text-white font-medium transition-all duration-300 hover:bg-green-700 rounded-lg"
+                  className="flex items-center justify-center gap-2 px-6 py-4 bg-green-600 text-white font-semibold uppercase text-sm tracking-wider transition-all duration-300 hover:bg-green-700 rounded"
                 >
                   <MessageCircle className="w-5 h-5" />
                   {t.contact.whatsapp}
                 </button>
                 <button 
                   onClick={handleCall}
-                  className="flex items-center justify-center gap-2 px-6 py-4 border border-background/30 text-background font-medium transition-all duration-300 hover:bg-background hover:text-foreground rounded-lg"
+                  className="flex items-center justify-center gap-2 px-6 py-4 border-2 border-primary text-primary font-semibold uppercase text-sm tracking-wider transition-all duration-300 hover:bg-primary hover:text-charcoal rounded"
                 >
                   <Phone className="w-5 h-5" />
                   {t.contact.call}
@@ -102,7 +105,7 @@ const ContactSection: React.FC = () => {
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-sm text-background/60 mb-2">
+                <label className="block text-sm text-warm-white/60 mb-2 uppercase tracking-wider">
                   {t.contact.form.name}
                 </label>
                 <input
@@ -111,13 +114,13 @@ const ContactSection: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-transparent border border-background/30 text-background placeholder:text-background/40 focus:outline-none focus:border-background transition-colors rounded-lg"
+                  className="w-full px-4 py-3 bg-transparent border border-warm-white/30 text-warm-white placeholder:text-warm-white/40 focus:outline-none focus:border-primary transition-colors rounded"
                 />
               </div>
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm text-background/60 mb-2">
+                  <label className="block text-sm text-warm-white/60 mb-2 uppercase tracking-wider">
                     {t.contact.form.email}
                   </label>
                   <input
@@ -126,11 +129,11 @@ const ContactSection: React.FC = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-transparent border border-background/30 text-background placeholder:text-background/40 focus:outline-none focus:border-background transition-colors rounded-lg"
+                    className="w-full px-4 py-3 bg-transparent border border-warm-white/30 text-warm-white placeholder:text-warm-white/40 focus:outline-none focus:border-primary transition-colors rounded"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm text-background/60 mb-2">
+                  <label className="block text-sm text-warm-white/60 mb-2 uppercase tracking-wider">
                     {t.contact.form.phone}
                   </label>
                   <input
@@ -138,13 +141,13 @@ const ContactSection: React.FC = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-transparent border border-background/30 text-background placeholder:text-background/40 focus:outline-none focus:border-background transition-colors rounded-lg"
+                    className="w-full px-4 py-3 bg-transparent border border-warm-white/30 text-warm-white placeholder:text-warm-white/40 focus:outline-none focus:border-primary transition-colors rounded"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm text-background/60 mb-2">
+                <label className="block text-sm text-warm-white/60 mb-2 uppercase tracking-wider">
                   {t.contact.form.message}
                 </label>
                 <textarea
@@ -152,14 +155,14 @@ const ContactSection: React.FC = () => {
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-4 py-3 bg-transparent border border-background/30 text-background placeholder:text-background/40 focus:outline-none focus:border-background transition-colors resize-none rounded-lg"
+                  className="w-full px-4 py-3 bg-transparent border border-warm-white/30 text-warm-white placeholder:text-warm-white/40 focus:outline-none focus:border-primary transition-colors resize-none rounded"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full flex items-center justify-center gap-3 px-8 py-4 bg-background text-foreground font-medium tracking-wide transition-all duration-300 hover:bg-background/90 disabled:opacity-50 rounded-lg"
+                className="w-full btn-primary disabled:opacity-50"
               >
                 <Send className="w-5 h-5" />
                 {isSubmitting ? '...' : t.contact.form.submit}

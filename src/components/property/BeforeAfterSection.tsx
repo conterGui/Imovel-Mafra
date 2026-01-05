@@ -89,23 +89,23 @@ const ComparisonSlider: React.FC<ComparisonSliderProps> = ({
 
         {/* Slider line */}
         <div
-          className="absolute top-0 bottom-0 w-0.5 bg-white shadow-lg"
+          className="absolute top-0 bottom-0 w-0.5 bg-primary shadow-lg"
           style={{ left: `${sliderPosition}%`, transform: 'translateX(-50%)' }}
         >
           {/* Handle */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-lg">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-primary rounded-full flex items-center justify-center shadow-lg">
             <div className="flex gap-0.5">
-              <div className="w-0.5 h-4 bg-foreground/60" />
-              <div className="w-0.5 h-4 bg-foreground/60" />
+              <div className="w-0.5 h-4 bg-charcoal/60" />
+              <div className="w-0.5 h-4 bg-charcoal/60" />
             </div>
           </div>
         </div>
 
         {/* Labels */}
-        <div className="absolute bottom-4 left-4 bg-black/60 text-white text-sm px-3 py-1.5 backdrop-blur-sm rounded">
+        <div className="absolute bottom-4 left-4 bg-charcoal/80 text-warm-white text-sm px-3 py-1.5 backdrop-blur-sm rounded uppercase tracking-wider">
           {beforeLabel}
         </div>
-        <div className="absolute bottom-4 right-4 bg-black/60 text-white text-sm px-3 py-1.5 backdrop-blur-sm rounded">
+        <div className="absolute bottom-4 right-4 bg-primary text-charcoal text-sm px-3 py-1.5 backdrop-blur-sm rounded uppercase tracking-wider font-semibold">
           {afterLabel}
         </div>
       </div>
@@ -133,9 +133,12 @@ const BeforeAfterSection: React.FC = () => {
     <section 
       id="before-after" 
       ref={ref as React.RefObject<HTMLElement>}
-      className="section-padding bg-secondary"
+      className="section-padding bg-background"
     >
       <div className="container-wide">
+        {/* Gold accent line */}
+        <div className="w-12 h-0.5 bg-primary mb-8" />
+        
         <h2 
           className={`heading-primary mb-16 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
@@ -166,14 +169,14 @@ const BeforeAfterSection: React.FC = () => {
             <>
               <button
                 onClick={goToPrevious}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:translate-x-0 w-12 h-12 bg-background/90 hover:bg-background rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
+                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:translate-x-0 w-12 h-12 bg-charcoal hover:bg-primary text-warm-white hover:text-charcoal rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
                 aria-label="Anterior"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
               <button
                 onClick={goToNext}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-0 w-12 h-12 bg-background/90 hover:bg-background rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
+                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-0 w-12 h-12 bg-charcoal hover:bg-primary text-warm-white hover:text-charcoal rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
                 aria-label="Próximo"
               >
                 <ChevronRight className="w-6 h-6" />
@@ -190,8 +193,8 @@ const BeforeAfterSection: React.FC = () => {
                   onClick={() => setCurrentIndex(index)}
                   className={`w-2 h-2 rounded-full transition-all duration-300 ${
                     index === currentIndex 
-                      ? 'bg-foreground w-6' 
-                      : 'bg-foreground/30 hover:bg-foreground/50'
+                      ? 'bg-primary w-6' 
+                      : 'bg-charcoal/30 hover:bg-charcoal/50'
                   }`}
                   aria-label={`Ir para ${comparisons[index].label}`}
                 />
@@ -208,7 +211,7 @@ const BeforeAfterSection: React.FC = () => {
                   onClick={() => setCurrentIndex(index)}
                   className={`flex-shrink-0 transition-all duration-300 ${
                     index === currentIndex 
-                      ? 'ring-2 ring-foreground ring-offset-2' 
+                      ? 'ring-2 ring-primary ring-offset-2' 
                       : 'opacity-60 hover:opacity-100'
                   }`}
                 >

@@ -74,11 +74,11 @@ const HeroSection: React.FC = () => {
             className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in"
             style={{ animationDelay: '600ms' }}
           >
-            <button onClick={handleCall} className="btn-primary bg-white text-foreground hover:bg-white/90">
+            <button onClick={handleCall} className="btn-primary">
               <Phone className="w-5 h-5" />
               {t.hero.cta}
             </button>
-            <button onClick={handleWhatsApp} className="btn-secondary border-white text-white hover:bg-white hover:text-foreground">
+            <button onClick={handleWhatsApp} className="btn-outline border-white text-white hover:bg-white hover:text-charcoal">
               <MessageCircle className="w-5 h-5" />
               {t.hero.ctaSecondary}
             </button>

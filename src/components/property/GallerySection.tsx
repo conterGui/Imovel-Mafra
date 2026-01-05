@@ -55,9 +55,12 @@ const GallerySection: React.FC = () => {
     <section 
       id="gallery" 
       ref={ref as React.RefObject<HTMLElement>}
-      className="section-padding bg-background"
+      className="section-padding bg-warm-white"
     >
       <div className="container-wide">
+        {/* Gold accent line */}
+        <div className="w-12 h-0.5 bg-primary mb-8" />
+        
         <h2 
           className={`heading-primary mb-16 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
@@ -71,17 +74,21 @@ const GallerySection: React.FC = () => {
           {images.map((image, index) => (
             <div
               key={index}
-              className={`${getImageStyle(index)} image-zoom cursor-pointer transition-all duration-700 ${
+              className={`${getImageStyle(index)} image-zoom cursor-pointer transition-all duration-700 group ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
               onClick={() => openLightbox(index)}
             >
-              <img
-                src={image}
-                alt={`Gallery ${index + 1}`}
-                className="w-full h-full object-cover rounded-lg"
-              />
+              <div className="relative w-full h-full overflow-hidden rounded-lg">
+                <img
+                  src={image}
+                  alt={`Gallery ${index + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                {/* Gold hover overlay */}
+                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
+              </div>
             </div>
           ))}
         </div>
