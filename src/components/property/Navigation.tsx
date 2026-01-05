@@ -51,11 +51,11 @@ const Navigation: React.FC = () => {
           <a 
             href="#hero" 
             onClick={(e) => { e.preventDefault(); handleNavClick('hero'); }}
-            className={`font-display text-lg font-medium tracking-tight transition-colors ${
+            className={`font-display text-lg font-semibold tracking-tight transition-colors ${
               isScrolled ? 'text-foreground' : 'text-white'
             }`}
           >
-            IMÓVEL
+            <span className="text-primary">IMÓVEL</span>
           </a>
 
           {/* Right side: Language + Hamburger */}

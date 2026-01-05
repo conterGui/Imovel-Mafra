@@ -10,10 +10,13 @@ const AboutSection: React.FC = () => {
     <section 
       id="about" 
       ref={ref as React.RefObject<HTMLElement>}
-      className="section-padding bg-background"
+      className="section-padding bg-warm-white"
     >
       <div className="container-narrow">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
+          {/* Gold accent line */}
+          <div className="w-12 h-0.5 bg-primary mb-8" />
+          
           {/* Section title */}
           <h2 className="heading-primary mb-12">
             {t.about.title}
@@ -25,7 +28,7 @@ const AboutSection: React.FC = () => {
               {t.about.description}
             </p>
             
-            <div className="divider" />
+            <div className="w-full h-px bg-primary/30" />
             
             <p className="body-base text-muted-foreground">
               {t.about.longDescription}

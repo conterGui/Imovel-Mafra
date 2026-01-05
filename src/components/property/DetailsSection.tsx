@@ -40,11 +40,14 @@ const DetailsSection: React.FC = () => {
     <section 
       id="details" 
       ref={ref as React.RefObject<HTMLElement>}
-      className="section-padding bg-secondary"
+      className="section-padding bg-charcoal text-warm-white"
     >
       <div className="container-wide">
+        {/* Gold accent line */}
+        <div className="w-12 h-0.5 bg-primary mb-8" />
+        
         <h2 
-          className={`heading-primary mb-16 transition-all duration-1000 ${
+          className={`heading-primary text-warm-white mb-16 transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
           }`}
         >
@@ -60,9 +63,9 @@ const DetailsSection: React.FC = () => {
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <detail.icon className="w-6 h-6 text-muted-foreground mb-4" />
-              <span className="body-small mb-2">{detail.label}</span>
-              <span className="heading-secondary">{detail.value}</span>
+              <detail.icon className="w-6 h-6 text-primary mb-4" />
+              <span className="text-sm text-warm-white/60 mb-2 uppercase tracking-wider">{detail.label}</span>
+              <span className="heading-secondary text-warm-white">{detail.value}</span>
             </div>
           ))}
         </div>
