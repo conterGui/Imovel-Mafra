@@ -1,83 +1,85 @@
 // ============================================
-// IMAGENS DO IMÓVEL (TypeScript)
+// IMAGENS DO IMÓVEL (TypeScript) – GitHub Pages
 // ============================================
 
+// BASE DO REPOSITÓRIO NO GH PAGES
+const BASE = "/imovel-mafra/";
+
 // HERO
-import heroImage from "@/assets/hero/DJI_0695.jpg";
+const heroImage = `${BASE}hero/DJI_0695.jpg`;
 
 // BEFORE / AFTER
-import beforeLiving from "@/assets/before/before-living.jpg";
-import afterLiving from "@/assets/after/after-living.jpg";
-import beforeKitchen from "@/assets/before/before-kitchen.jpg";
-import afterKitchen from "@/assets/after/after-kitchen.jpg";
-import beforePool from "@/assets/before/before-pool.jpg";
-import afterPool from "@/assets/after/after-pool.jpg";
-import afterYard from "@/assets/after/after-yard.jpg";
-import beforeYard from "@/assets/before/before-yard.jpg";
-import beforeGarage from "@/assets/before/before-garage.jpg";
-import afterGarage from "@/assets/after/after-garage.jpg";
+const beforeLiving = `${BASE}before/before-living.jpg`;
+const afterLiving = `${BASE}after/after-living.jpg`;
+const beforeKitchen = `${BASE}before/before-kitchen.jpg`;
+const afterKitchen = `${BASE}after/after-kitchen.jpg`;
+const beforePool = `${BASE}before/before-pool.jpg`;
+const afterPool = `${BASE}after/after-pool.jpg`;
+const beforeYard = `${BASE}before/before-yard.jpg`;
+const afterYard = `${BASE}after/after-yard.jpg`;
+const beforeGarage = `${BASE}before/before-garage.jpg`;
+const afterGarage = `${BASE}after/after-garage.jpg`;
 
-// DRONE
-import g1 from "@/assets/gallery/DJI_0688.jpg";
-import g2 from "@/assets/gallery/DJI_0689.jpg";
-import g3 from "@/assets/gallery/DJI_0690.jpg";
-import g4 from "@/assets/gallery/DJI_0691.jpg";
-import g5 from "@/assets/gallery/DJI_0692.jpg";
-import g6 from "@/assets/gallery/DJI_0693.jpg";
-import g7 from "@/assets/gallery/DJI_0694.jpg";
-import g8 from "@/assets/gallery/DJI_0696.jpg";
+// DRONE / GALLERY
+const g1 = `${BASE}gallery/DJI_0688.jpg`;
+const g2 = `${BASE}gallery/DJI_0689.jpg`;
+const g3 = `${BASE}gallery/DJI_0690.jpg`;
+const g4 = `${BASE}gallery/DJI_0691.jpg`;
+const g5 = `${BASE}gallery/DJI_0692.jpg`;
+const g6 = `${BASE}gallery/DJI_0693.jpg`;
+const g7 = `${BASE}gallery/DJI_0694.jpg`;
+const g8 = `${BASE}gallery/DJI_0696.jpg`;
 
 // INTERIOR
-import g9 from "@/assets/gallery/DSC06927.jpg";
-import g10 from "@/assets/gallery/DSC06928.jpg";
-import g11 from "@/assets/gallery/DSC06929.jpg";
-import g12 from "@/assets/gallery/DSC06930.jpg";
-import g13 from "@/assets/gallery/DSC06931.jpg";
-import g14 from "@/assets/gallery/DSC06932.jpg";
-import g15 from "@/assets/gallery/DSC06933.jpg";
+const g9 = `${BASE}gallery/DSC06927.jpg`;
+const g10 = `${BASE}gallery/DSC06928.jpg`;
+const g11 = `${BASE}gallery/DSC06929.jpg`;
+const g12 = `${BASE}gallery/DSC06930.jpg`;
+const g13 = `${BASE}gallery/DSC06931.jpg`;
+const g14 = `${BASE}gallery/DSC06932.jpg`;
+const g15 = `${BASE}gallery/DSC06933.jpg`;
 
 // BLENDS
-import g16 from "@/assets/gallery/DSC06935Blend.jpg";
-import g17 from "@/assets/gallery/DSC06940Blend.jpg";
-import g18 from "@/assets/gallery/DSC06945Blend.jpg";
-import g19 from "@/assets/gallery/DSC06950Blend.jpg";
-import g20 from "@/assets/gallery/DSC06955Blend.jpg";
-import g21 from "@/assets/gallery/DSC06960Blend.jpg";
-import g22 from "@/assets/gallery/DSC06965Blend.jpg";
-import g23 from "@/assets/gallery/DSC06970Blend.jpg";
-import g24 from "@/assets/gallery/DSC06975Blend.jpg";
-import g25 from "@/assets/gallery/DSC06980Blend.jpg";
-import g26 from "@/assets/gallery/DSC06985Blend.jpg";
-import g27 from "@/assets/gallery/DSC06990Blend.jpg";
-import g28 from "@/assets/gallery/DSC06995Blend.jpg";
+const g16 = `${BASE}gallery/DSC06935Blend.jpg`;
+const g17 = `${BASE}gallery/DSC06940Blend.jpg`;
+const g18 = `${BASE}gallery/DSC06945Blend.jpg`;
+const g19 = `${BASE}gallery/DSC06950Blend.jpg`;
+const g20 = `${BASE}gallery/DSC06955Blend.jpg`;
+const g21 = `${BASE}gallery/DSC06960Blend.jpg`;
+const g22 = `${BASE}gallery/DSC06965Blend.jpg`;
+const g23 = `${BASE}gallery/DSC06970Blend.jpg`;
+const g24 = `${BASE}gallery/DSC06975Blend.jpg`;
+const g25 = `${BASE}gallery/DSC06980Blend.jpg`;
+const g26 = `${BASE}gallery/DSC06985Blend.jpg`;
+const g27 = `${BASE}gallery/DSC06990Blend.jpg`;
+const g28 = `${BASE}gallery/DSC06995Blend.jpg`;
 
-import g29 from "@/assets/gallery/DSC07000Blend.jpg";
-import g30 from "@/assets/gallery/DSC07005Blend.jpg";
-import g31 from "@/assets/gallery/DSC07010Blend.jpg";
-import g32 from "@/assets/gallery/DSC07020Blend.jpg";
-import g33 from "@/assets/gallery/DSC07025Blend.jpg";
-import g34 from "@/assets/gallery/DSC07030Blend.jpg";
-import g35 from "@/assets/gallery/DSC07035Blend.jpg";
-import g36 from "@/assets/gallery/DSC07044Blend.jpg";
-import g37 from "@/assets/gallery/DSC07045Blend.jpg";
+const g29 = `${BASE}gallery/DSC07000Blend.jpg`;
+const g30 = `${BASE}gallery/DSC07005Blend.jpg`;
+const g31 = `${BASE}gallery/DSC07010Blend.jpg`;
+const g32 = `${BASE}gallery/DSC07020Blend.jpg`;
+const g33 = `${BASE}gallery/DSC07025Blend.jpg`;
+const g34 = `${BASE}gallery/DSC07030Blend.jpg`;
+const g35 = `${BASE}gallery/DSC07035Blend.jpg`;
+const g36 = `${BASE}gallery/DSC07044Blend.jpg`;
+const g37 = `${BASE}gallery/DSC07045Blend.jpg`;
 
-import g38 from "@/assets/gallery/DSC07055Blend.jpg";
-import g39 from "@/assets/gallery/DSC07060Blend.jpg";
-import g40 from "@/assets/gallery/DSC07065Blend.jpg";
-import g41 from "@/assets/gallery/DSC07070Blend.jpg";
-import g42 from "@/assets/gallery/DSC07075Blend.jpg";
-import g43 from "@/assets/gallery/DSC07080Blend.jpg";
-import g44 from "@/assets/gallery/DSC07085Blend.jpg";
-import g45 from "@/assets/gallery/DSC07090Blend.jpg";
-import g46 from "@/assets/gallery/DSC07095Blend.jpg";
-import g47 from "@/assets/gallery/DSC07100Blend.jpg";
-import g48 from "@/assets/gallery/DSC07105Blend.jpg";
-import g49 from "@/assets/gallery/DSC07110Blend.jpg";
+const g38 = `${BASE}gallery/DSC07055Blend.jpg`;
+const g39 = `${BASE}gallery/DSC07060Blend.jpg`;
+const g40 = `${BASE}gallery/DSC07065Blend.jpg`;
+const g41 = `${BASE}gallery/DSC07070Blend.jpg`;
+const g42 = `${BASE}gallery/DSC07075Blend.jpg`;
+const g43 = `${BASE}gallery/DSC07080Blend.jpg`;
+const g44 = `${BASE}gallery/DSC07085Blend.jpg`;
+const g45 = `${BASE}gallery/DSC07090Blend.jpg`;
+const g46 = `${BASE}gallery/DSC07095Blend.jpg`;
+const g47 = `${BASE}gallery/DSC07100Blend.jpg`;
+const g48 = `${BASE}gallery/DSC07105Blend.jpg`;
+const g49 = `${BASE}gallery/DSC07110Blend.jpg`;
 
 // EXTRAS
-import g50 from "@/assets/gallery/DSC07115.jpg";
-import g51 from "@/assets/gallery/DSC07116.jpg";
-
+const g50 = `${BASE}gallery/DSC07115.jpg`;
+const g51 = `${BASE}gallery/DSC07116.jpg`;
 
 // =======================
 // TIPOS
@@ -110,22 +112,9 @@ export const propertyImages: PropertyImages = {
   ],
 
   beforeAfter: [
-    {
-      label: "exterior",
-      before: beforeYard,
-      after: afterYard,
-    },
-    {
-      label: "garage",
-      before: beforeGarage,
-      after: afterGarage,
-    },
-    
-    {
-      label: "pool",
-      before: beforePool,
-      after: afterPool,
-    },
+    { label: "exterior", before: beforeYard, after: afterYard },
+    { label: "garage", before: beforeGarage, after: afterGarage },
+    { label: "pool", before: beforePool, after: afterPool },
   ],
 };
 
