@@ -43,7 +43,10 @@
         "bedroom": "Bedroom",
         "bathroom": "Bathroom",
         "livingRoom": "Living Room",
-        "kitchen": "Kitchen"
+        "kitchen": "Kitchen",
+        "exterior": "Exterior",
+        "garage": "Garage",
+        "pool": "Pool"
       }
   },
   "video": {

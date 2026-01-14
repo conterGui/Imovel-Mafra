@@ -10,8 +10,8 @@ import beforeLiving from "@/assets/before/before-living.jpg";
 import afterLiving from "@/assets/after/after-living.jpg";
 import beforeKitchen from "@/assets/before/before-kitchen.jpg";
 import afterKitchen from "@/assets/after/after-kitchen.jpg";
-import beforeBedroom from "@/assets/before/before-bedroom.jpg";
-import afterBedroom from "@/assets/after/after-bedroom.jpg";
+import beforePool from "@/assets/before/before-pool.jpg";
+import afterPool from "@/assets/after/after-pool.jpg";
 import afterYard from "@/assets/after/after-yard.jpg";
 import beforeYard from "@/assets/before/before-yard.jpg";
 import beforeGarage from "@/assets/before/before-garage.jpg";
@@ -122,9 +122,9 @@ export const propertyImages: PropertyImages = {
     },
     
     {
-      label: "bedroom",
-      before: beforeBedroom,
-      after: afterBedroom,
+      label: "pool",
+      before: beforePool,
+      after: afterPool,
     },
   ],
 };

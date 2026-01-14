@@ -45,7 +45,9 @@
         "kitchen": "Cozinha",
         "bedroom": "Quarto Principal",
         "bathroom": "Casa de Banho",
-        "exterior": "Exterior"
+        "exterior": "Exterior",
+        "garage": "Garagem",
+        "pool": "Piscina"
       }
   },
   "video": {
