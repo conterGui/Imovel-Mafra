@@ -5,31 +5,40 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  // 1. ADICIONE A BASE AQUI: Use o nome do seu repositório entre barras
-  // Se o seu repo é github.com, a base é '/imovel_mafra/'
+  // Base para GitHub Pages
   base: '/imovel-mafra/',
 
   server: {
     host: "::",
     port: 8080,
   },
-  
-  // Manteve o suporte para .JPG (maiúsculas) que resolve parte do erro anterior
+
+  // Permite importar JPG maiúsculo
   assetsInclude: ["**/*.JPG"],
-  
+
   plugins: [
-    react(), 
+    react(),
     mode === "development" && componentTagger()
   ].filter(Boolean),
-  
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  
-  // 2. GARANTIR O BUILD: Define a pasta de saída (opcional, padrão é dist)
+
   build: {
-    outDir: 'docs',
+    outDir: 'docs',      // Pasta de saída
+    assetsDir: 'assets', // Pasta para JS/CSS/imagens
+    emptyOutDir: true,   // Limpa a pasta antes do build
+    rollupOptions: {
+      input: 'index.html',
+    },
+    sourcemap: false,    // Opcional: false em produção
+  },
+
+  // Optional: otimizações adicionais
+  optimizeDeps: {
+    include: ["react", "react-dom"]
   }
 }));
