@@ -27,7 +27,7 @@ export const propertyConfig = {
   email: "sandrasemedo@century21.pt",
 
   // Localização - Loures Shopping, Loures, Lisboa, Portugal
-  address: "Estr. da Chança 6, 2640-601 Sobral da Abelheira",
+  address: "Estr. da ChancSa 6, 2640-601 Sobral da Abelheira",
   mapCenter: { lat: 38.980889, lng: -9.30825 },
 
   
